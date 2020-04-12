@@ -1,4 +1,23 @@
 .container {
     border-style: solid;
     padding: 30px;
+
+}
+
+.quote {
+    text-align: center;
+    animation: 10s fadeIn;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      visibility: visible;
+      opacity: 1;
+    }
 }
