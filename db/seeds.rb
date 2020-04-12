@@ -8,5 +8,5 @@
 Service.all.destroy_all
 Category.all.destroy_all
 
-Service.create([{name: "Therapy Kinections LLC", location:"Southbury, CT", phone_number: "(203) 262-9909", url: "https://therapykinections.com/", category_id: 1}])
+Service.create([{name: "Therapy Kinections LLC", location:"Southbury, CT", phone_number: "(203) 262-9909", url: "https://therapykinections.com/", category_id: 7}])
 Category.create([{name: "Occupational Therapy"}, {name: "Physical Therapy"}, {name: "Speech"}])

@@ -1,18 +1,18 @@
 class ServicesController < ApplicationController
     def index
-        byebug
+        # byebug
         @services = Service.all
         render json: @services
       end
     
       def create
-        service = Service.create(service_params)
-        render json: service
+        @service = Service.create(service_params)
+        render json: @service
       end
     
       def destroy
-        service = Service.find_by(id: params[:id])
-        service.destroy
+        @service = Service.find_by(id: params[:id])
+        @service.destroy
       end
     
       private
