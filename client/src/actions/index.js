@@ -1,11 +1,10 @@
-// export const fetchCategories = () => {
-
-//     return (dispatch) => {
-//       return fetch('http://localhost:3000/categories')
-//       .then(resp => resp.json())
-//       .then(powers => {
-//         dispatch({type: "ADD_POWERS", payload: powers})
-//       })
-//     }
+export const fetchCategories = () => {
+    return (dispatch) => {
+        dispatch({type: 'LOADING_CATEGORIES'})
+         return fetch('http://localhost:3000/categories')
+          .then(resp => resp.json())
+          .then(categories => {dispatch({type: "FETCH_CATEGORIES", payload: categories})})
+    }
   
-//   }
+  }
+
