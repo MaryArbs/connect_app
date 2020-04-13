@@ -1,0 +1,13 @@
+* {
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    justify-content: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    padding: 30px;
+    color: yellow
+}
