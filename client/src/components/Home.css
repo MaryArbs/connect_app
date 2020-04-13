@@ -10,6 +10,8 @@
     animation-delay: 1s;
     animation-fill-mode: forwards;
     visibility: hidden;
+    font-size: 12px;
+  
 }
 
 @keyframes fadeIn {
