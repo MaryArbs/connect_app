@@ -27,7 +27,44 @@
     left: 0px;
     right: 0px;
   }
-    
+  
+  .container {
+   
+    padding: 30px;
+    padding-top:200px;
+}
+
+  .homepage_pic {
+    border-style: solid;
+    color: #21a0fa;
+    margin-bottom: 50px;
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 75%;
+    height: 500px;
+}
+
+.Footer {
+  text-align: center;
+  background-color: #21a0fa ;
+  color: white;
+  position: absolute;
+  padding: 15px;
+  left: 0px;
+  right: 0px;
+}
+
+.homepage .ui.blue.inverted.animated.button{
+  float: left;
+  height: 25px;
+  width: 80px;
+  padding-left: 7px;
+  padding-bottom: 20px;
+}
+
+.homepage .ui.blue.inverted.animated.button .visible.content{
+  font-size: small;
+}
   /* #005960 */
   /* #21a0fa ; */
   /* #7FCDCD */

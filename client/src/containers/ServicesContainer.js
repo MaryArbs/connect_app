@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Services from '../components/Services/Services';
 import { fetchServices } from '../actions/index';
 import { Container } from 'semantic-ui-react'
+import CategoryShowPage from '../components/Categories/CategoryShowPage'
 
 class ServicesContainer extends Component {
 
@@ -13,9 +14,12 @@ class ServicesContainer extends Component {
 
     render() {
         return (
-            <Container>
-               <Services services={this.props.services }/>
-            </Container>
+       <CategoryShowPage
+        services={this.props.services }
+        categoryId={this.props.category_id}
+        
+        />
+            
         )
     }
 };
