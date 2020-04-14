@@ -1,9 +1,3 @@
-.container {
-    border-style: solid;
-    padding: 30px;
-
-}
-
 .quote {
     text-align: center;
     animation: 10s fadeIn;
@@ -23,3 +17,15 @@
       opacity: 1;
     }
 }
+
+.main_header {
+    text-align: center;
+    background-color: #21a0fa ;
+    color: white;
+    position: absolute;
+    padding: 15px;
+    left: 0px;
+    right: 0px;
+  }
+    
+  /* #005960 */
