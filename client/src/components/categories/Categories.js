@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Container } from 'semantic-ui-react';
 import Category from './Category'
-import './card.css'
+import './categoryCard.css'
 
 
 class Categories extends Component {

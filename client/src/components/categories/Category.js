@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'semantic-ui-react';
 import { Card, Image} from 'semantic-ui-react';
-import './card.css';
+import './categoryCard.css';
 
 
 
