@@ -6,7 +6,8 @@ export default function categoriesReducer(state = { categories: [], loading: fal
         case 'FETCH_CATEGORIES':
             console.log("categories are loaded")
             return {...state, categories: action.payload, loading: false}
-            default:
+        
+        default:
                 return state
   }
 }

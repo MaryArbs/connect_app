@@ -7,7 +7,7 @@
 
 
 .grid-container {
-    padding-top:200px;
+    padding-top:0px;
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: space-between;
@@ -15,10 +15,12 @@
 
 }
 
+
+
 .category_card {
-    margin: 0 auto; /* Added */
-    float: none; /* Added */
-    margin-bottom: 10px; /* Added */
+    margin: 0 auto; 
+    float: none; 
+    margin-bottom: 10px; 
     border-style: solid;
     padding: 70px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -46,8 +48,3 @@
     font-size: 20px;
     border-bottom: solid;
 }
-
-
-
-
-/* color: #20B2AA; */

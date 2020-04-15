@@ -15,7 +15,7 @@ const Category = props => {
            <Card.Description className="card_description"> {props.category.description}</Card.Description><br />
            <Image className='category_image' src={props.category.image} /><br />
         </Card.Content>
-         <button className="category_button" onClick={() =>  window.location.href='/category'}>
+         <button className="category_button" onClick={() =>  window.location.href='/categories/:categoryId'}>
           <div className="visible content">Learn More</div>
         </button>
         </div>
