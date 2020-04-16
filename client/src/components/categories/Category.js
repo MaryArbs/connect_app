@@ -2,6 +2,8 @@ import React from 'react';
 import { Container } from 'semantic-ui-react';
 import { Card, Image} from 'semantic-ui-react';
 import './categoryCard.css';
+import  CategoryShowPage from './CategoryShowPage'
+import {NavLink} from 'react-router-dom'
 
 
 
@@ -15,14 +17,21 @@ const Category = props => {
            <Card.Description className="card_description"> {props.category.description}</Card.Description><br />
            <Image className='category_image' src={props.category.image} /><br />
         </Card.Content>
-         <button className="category_button" onClick={() =>  window.location.href='/categories/:categoryId'}>
-          <div className="visible content">Learn More</div>
-        </button>
+        <NavLink
+          to={`/categories/${props.category.id}`}
+          category={props.category}>
+             <button>
+                Learn More
+             </button>
+        </NavLink>
         </div>
         </Card>
         </Container>
      )
 }
+
+
+
 
 
 export default Category

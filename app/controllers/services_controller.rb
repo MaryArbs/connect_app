@@ -5,6 +5,11 @@ class ServicesController < ApplicationController
         render json: @services
       end
     
+      def show
+        @service = Service.find(params[:id])
+        render json: @service
+      end
+
       def create
         @service = Service.create(service_params)
         render json: @service

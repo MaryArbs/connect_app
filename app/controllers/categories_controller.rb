@@ -11,9 +11,10 @@ class CategoriesController < ApplicationController
       end
 
       def show
+        @category = Category.find(params[:id])
         render json: @category
-    end
-    s
+      end
+    
       def update
         @category = Category.find_by(id: params[:id])
         @category.update(category_params)

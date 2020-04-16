@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import CategoriesContainer from '../containers/CategoriesContainer'
 import Header from '../components/Header'
 import Home from '../components/Home'
-// import ServicesContainer from '../containers/ServicesContainer'
 import CategoryShowPage from '../components/Categories/CategoryShowPage'
 import Footer from '../components/Footer'
 import { fetchServices } from '../actions/index';
@@ -20,9 +19,9 @@ class Main extends Component {
         this.props.fetchServices()
     };
 
-
-
+   
     render() {
+        console.log(this.props.categories)
         return (
          <div>
          <Header/>
@@ -30,8 +29,8 @@ class Main extends Component {
             <div>
               <Route exact path="/" component={ Home } />
               <Route exact path="/categories" component={ CategoriesContainer } />
-              <Route exact path='/categories/:categoryId' component={ CategoryShowPage } />
-           </div>
+              <Route exact path='/categories/:id' component={ ({match}) => <CategoryShowPage categories={this.props.categories} id={match.params.id} />}/> 
+              </div>
          </Switch>
          <Footer />
      </div>

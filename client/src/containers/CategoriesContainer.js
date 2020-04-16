@@ -4,6 +4,7 @@ import { Container } from 'semantic-ui-react'
 import Category from '../components/Categories/Category'
 import '../components/Categories/categoryCard.css'
 
+
 class CategoriesContainer extends Component {
 
     renderCategories = () => { 
