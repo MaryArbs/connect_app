@@ -18,8 +18,7 @@ const Category = props => {
            <Image className='category_image' src={props.category.image} /><br />
         </Card.Content>
         <NavLink
-          to={`/categories/${props.category.id}`}
-          category={props.category}>
+          to={`/categories/${props.category.id}`}>
              <button>
                 Learn More!
              </button>

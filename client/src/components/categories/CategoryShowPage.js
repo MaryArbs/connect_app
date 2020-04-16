@@ -3,9 +3,8 @@ import { Container } from 'semantic-ui-react';
 import Service from '../Services/Service'
 import { connect } from 'react-redux';
 import Category from './Category';
+import { Card, Image} from 'semantic-ui-react';
 import './categoryCard.css'
-// import { fetchCategory } from './actions/index';
-
 
 
 class CategoryShowPage extends Component {
@@ -17,64 +16,39 @@ class CategoryShowPage extends Component {
             return (
                 <div>
                 <h1>{category.name}</h1>
-                <p>{category.description}</p>
+                <div className="category_description" ><h3>{category.description}</h3></div>
+                <Image className='category_image' src={category.image} /><br />
                 </div>
             )}
         )};
-    // need to connect current category with service 
 
     renderServices = () => {
-        console.log(this.props.services)
-       return this.props.services.filter(service => service.category_id == this.props.id).map((service)=>{
-           return (
-               <div>
-                   <p>{service.name}</p>
-               </div>
-           )
+       let serviceList = this.props.services.filter(service => service.category_id == this.props.id).map((service)=>{
+       return <Service key={service.id} service={service} />
        })
+
+       return (
+        <ul>
+        {serviceList}
+        </ul>
+      )
     }
 
 
     render = () => {
       
          return (
+            <div className="grid-container">
             <Container>
                 {this.renderCategory()}
                 {this.renderServices()}
-            </Container>
+             </Container>
+             </div>
+           
         )
     };
-
-    //when use find it comes back undefined for name 
-
-        
-        
-
-    // renderCategoryServices = () => {
-    //     // console.log(this.props.match.params.categoryId) 
-    //    let listOfServices = this.props.services.filter(service => service.category_id === this.props.categories.id).map((service) => {
-    //        return <Service key={service.id} service={service} />
-
-    //    })
-
-    //    return (
-    //        <ul>
-    //         {matchCategory}
-    //         {listOfServices}
-    //        </ul>
-    //    )
-    //   };
-      
-    
-    // render = () => {
-    //     return (
-    //         <Container>
-    //           {/* {this.renderCategoryServices()} */}
-    //           <h1>HI</h1>
-    //         </Container>
-    //     )
-    // };
 }
+
 
  const mapStateToProps = (state) => {
     console.log(state)

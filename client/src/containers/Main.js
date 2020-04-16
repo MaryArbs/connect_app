@@ -58,16 +58,9 @@ class Main extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main);
 
-//set up match params  www.localhost:3000/categories/1
-//CategoryShowPage to display all the services for the category 
 
-//services not showing up unless rendered here 
 
 
 //switch only allows one route to exist at once 
     
       
-   
-
-
-// export default Main;

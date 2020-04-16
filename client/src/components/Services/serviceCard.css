@@ -7,45 +7,34 @@
 
 
 .grid-container {
-    padding-top:0px;
+    padding-top: 0px;
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: space-between;
+    font-size: 18px;
     color: #2a6592;
 
 }
 
 
 
-.category_card {
+.service_card {
     margin: 0 auto; 
     float: none; 
-    margin-bottom: 10px; 
+    margin-bottom: auto; 
     border-style: solid;
     padding: 70px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 50%;
-    height: 415px;
+    width: 70%;
+    height: 100px;
 } 
 
-.category_description {
-    font-style: italic;;
-}
-
-.category_card:hover {
+.service_card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
 
 
-.image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
-    height: 200px;
-    
-}
 
 .card_header {
     color: #2a6592;
