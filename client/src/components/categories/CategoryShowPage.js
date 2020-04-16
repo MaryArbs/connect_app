@@ -21,6 +21,18 @@ class CategoryShowPage extends Component {
                 </div>
             )}
         )};
+    // need to connect current category with service 
+
+    renderServices = () => {
+        console.log(this.props.services)
+       return this.props.services.filter(service => service.category_id == this.props.id).map((service)=>{
+           return (
+               <div>
+                   <p>{service.name}</p>
+               </div>
+           )
+       })
+    }
 
 
     render = () => {
@@ -28,20 +40,13 @@ class CategoryShowPage extends Component {
          return (
             <Container>
                 {this.renderCategory()}
+                {this.renderServices()}
             </Container>
         )
     };
 
     //when use find it comes back undefined for name 
 
-   
-
-    //  renderCategories = () => { 
-
-    //     let matchCategory = this.props.categories.filter(category => category.id === this.props.match.params.categoryId).map((category) => {
-    //         return <Category categoryId={category.id} />
-    //     })
-    // };
         
         
 
@@ -78,14 +83,6 @@ class CategoryShowPage extends Component {
         services: state.servicesReducer.services
     }
 };
-
-
-//   const mapDispatchToProps = dispatch => {
-//     return {
-//         fetchCategory: categoryId => dispatch(fetchCategory(categoryId)),
-//   };
-// }
-    
  
 export default connect(mapStateToProps)(CategoryShowPage);
 

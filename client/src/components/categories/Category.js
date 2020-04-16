@@ -21,7 +21,7 @@ const Category = props => {
           to={`/categories/${props.category.id}`}
           category={props.category}>
              <button>
-                Learn More
+                Learn More!
              </button>
         </NavLink>
         </div>
