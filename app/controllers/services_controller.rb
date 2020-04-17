@@ -1,7 +1,7 @@
 class ServicesController < ApplicationController
     def index
         # byebug
-        @services = Service.all.order(likes: :desc)
+        @services = Service.all.order(name: :asc)
         render json: @services
       end
     
