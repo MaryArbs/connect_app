@@ -10,14 +10,6 @@ export const fetchCategories = () => {
   
   };
 
-  export const fetchCategory = id => {
-    return (dispatch) => {
-        dispatch({type: 'LOADING_CATEGORY'})
-            return fetch(`${categoriesURL}/${id}`)
-                .then(response => response.json())
-                .then(category=> dispatch({type: 'FETCH_CATEGORY', payload: category}))
-    }
-};
 
   export const fetchServices = () => {
     return (dispatch) => {
@@ -26,5 +18,12 @@ export const fetchCategories = () => {
           .then(resp => resp.json())
           .then(services => {dispatch({type: "FETCH_SERVICES", payload: services})})
     }
-  }
+  };
+
+//   export const updateLikes = (services) => {
+//     return {
+//         type: 'UPDATE_LIKES',
+//         payload: services
+//     }
+// }
 

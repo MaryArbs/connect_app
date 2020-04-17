@@ -4,7 +4,7 @@ import Service from '../Services/Service'
 import { connect } from 'react-redux';
 import Category from './Category';
 import { Card, Image} from 'semantic-ui-react';
-import './categoryCard.css'
+
 
 
 class CategoryShowPage extends Component {

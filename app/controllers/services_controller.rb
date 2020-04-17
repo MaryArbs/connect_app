@@ -15,13 +15,14 @@ class ServicesController < ApplicationController
         render json: @service
       end
     
-      def destroy
+      def update
         @service = Service.find_by(id: params[:id])
-        @service.destroy
+        @service.update(service_params)
+        render json: @service 
       end
     
       private
       def service_params
-        params.require(:service).permit(:name, :location, :phone_number, :url, :category_id)
+        params.require(:service).permit(:name, :location, :phone_number, :url, :category_id, :like)
       end 
 end

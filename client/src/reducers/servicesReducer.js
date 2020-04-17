@@ -6,7 +6,10 @@ export default function servicesReducer(state = { services: [], loading: false }
         case 'FETCH_SERVICES':
             console.log("services are loaded")
             return {...state, services: action.payload, loading: false}
-            default:
-                return state
+        
+        case 'UPDATE_LIKES':
+            return {...state, services: action.payload, loading: false}
+        default:
+            return state
   }
 }
