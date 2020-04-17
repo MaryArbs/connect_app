@@ -1,7 +1,7 @@
 class ServicesController < ApplicationController
     def index
         # byebug
-        @services = Service.all
+        @services = Service.all.order(likes: :desc)
         render json: @services
       end
     
@@ -16,13 +16,14 @@ class ServicesController < ApplicationController
       end
     
       def update
+        # byebug
         @service = Service.find_by(id: params[:id])
         @service.update(service_params)
-        render json: @service 
+        render json: @service #{service: @service} 
       end
     
       private
       def service_params
-        params.require(:service).permit(:name, :location, :phone_number, :url, :category_id, :like)
+        params.require(:service).permit(:name, :location, :phone_number, :url, :category_id, :likes)
       end 
 end

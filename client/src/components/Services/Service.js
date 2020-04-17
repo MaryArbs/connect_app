@@ -32,25 +32,25 @@ import React, { Component } from 'react';
 import { Container } from 'semantic-ui-react';
 import { Card } from 'semantic-ui-react';
 import './serviceCard.css';
+import {connect} from 'react-redux'
+import { updateLikes } from '../../actions/index.js'
 
 class Service extends Component {
 
-    state = {
-    likes: 0
-  }
-
     updateLikes = () => {
-      let currentState = this.state.likes
-
-      this.setState({
-        likes: currentState + 1
-    })
+        let service = this.props.service
+        service.likes += 1
+        this.props.updateLikes(service)
+       
+    //   this.setState({
+    //     likes: currentState + 1  //on refresh it is going away  //need to connect to store with updateLikes POST method // send id to back end
+    // }) 
   }
 
     renderServiceCard = (props) => {
         return (
             // <div className="grid-container">
-            <Container>
+           <Container>
            <Card className="service_card">
            <div key={this.props.service.id}>
             <Card.Content>
@@ -58,7 +58,7 @@ class Service extends Component {
                <Card.Description className="card_description"> {this.props.service.location}</Card.Description><br />
                <Card.Description className="card_description"> {this.props.service.phone_number}</Card.Description><br />
                <a target='_blank' href={this.props.service.url}>Website</a><br /><br />
-               <button onClick={this.updateLikes}> Likes: {this.state.likes} </button><br /><br />
+               <button onClick={this.updateLikes}> Likes: {this.props.service.likes} </button>
             </Card.Content>
             </div>
             </Card>
@@ -69,12 +69,15 @@ class Service extends Component {
    
     render = () => {
     return (
-   
-     <div>
-     {this.renderServiceCard()}
-     </div>
+      <div>
+       {this.renderServiceCard()}
+      </div>
      )
     };
 }
 
-export default Service
+
+
+export default connect(null,{updateLikes})(Service)
+
+// export default Service

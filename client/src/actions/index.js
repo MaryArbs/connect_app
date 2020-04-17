@@ -20,10 +20,29 @@ export const fetchCategories = () => {
     }
   };
 
-//   export const updateLikes = (services) => {
-//     return {
-//         type: 'UPDATE_LIKES',
-//         payload: services
-//     }
-// }
+  export const updateLikes = (service) => {
+    let data = {
+      method: 'PATCH',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(service)
+    }
 
+    return dispatch => {
+      dispatch({type: "LOADING_SERVICES"});
+      fetch(`http://localhost:3000/services/${service.id}`, data)
+      .then(response => response.json())
+      .then(service=> {
+        // debugger // Find data in service. Might need to package it different leaving rails.
+        dispatch(addLike(service))
+      });
+    }
+    
+  }
+
+  const addLike = service => ({
+    type: 'UPDATE_LIKES',
+    payload: service 
+  });
