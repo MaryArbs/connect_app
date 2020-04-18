@@ -19,7 +19,7 @@ const Category = props => {
         </Card.Content>
         <NavLink
           to={`/categories/${props.category.id}`}>
-             <button>
+             <button class="ui button-category">
                 Learn More!
              </button>
         </NavLink>

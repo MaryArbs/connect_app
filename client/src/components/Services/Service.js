@@ -11,15 +11,10 @@ class Service extends Component {
         let service = this.props.service
         service.likes += 1
         this.props.updateLikes(service)
-       
-    //   this.setState({
-    //     likes: currentState + 1  //on refresh it is going away  //need to connect to store with updateLikes POST method // send id to back end
-    // }) 
   }
 
     renderServiceCard = (props) => {
         return (
-            // <div className="grid-container">
            <Container>
            <Card className="service_card">
            <div key={this.props.service.id}>
@@ -28,13 +23,14 @@ class Service extends Component {
                <Card.Description className="card_description"> {this.props.service.location}</Card.Description><br />
                <Card.Description className="card_description"> {this.props.service.phone_number}</Card.Description><br />
                <a target='_blank' href={this.props.service.url}>Website</a><br /><br />
-               <button onClick={this.updateLikes}> Likes: {this.props.service.likes} </button>
+               <button class="ui button" onClick={this.updateLikes}> Likes: {this.props.service.likes} </button>
             </Card.Content>
             </div>
             </Card>
             </Container>
         )
     }
+
    
    
     render = () => {
@@ -50,4 +46,3 @@ class Service extends Component {
 
 export default connect(null,{updateLikes})(Service)
 
-// export default Service

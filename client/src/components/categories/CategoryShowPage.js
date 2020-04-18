@@ -11,13 +11,12 @@ class CategoryShowPage extends Component {
 
 
     renderCategory = () => {
-        console.log(this.props.categories)
         return  this.props.categories.filter(category => category.id == this.props.id).map((category) => {
             return (
                 <div>
                 <h1>{category.name}</h1>
                 <div className="category_description" ><h3>{category.description}</h3></div>
-                <Image className='category_image' src={category.image} /><br />
+                <div><Image className='category_image' src={category.image} /></div><br /> 
                 </div>
             )}
         )};

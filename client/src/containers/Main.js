@@ -9,6 +9,7 @@ import CategoryShowPage from '../components/Categories/CategoryShowPage'
 import Footer from '../components/Footer'
 import { fetchServices } from '../actions/index';
 import { fetchCategories } from '../actions/index';
+import About from '../components/About'
 import './Main.css'
 
 class Main extends Component {
@@ -27,6 +28,7 @@ class Main extends Component {
             <div>
               <Route exact path="/" component={ Home } />
               <Route exact path="/categories" component={ CategoriesContainer } />
+              <Route exact path="/about" component={ About } />
               <Route exact path='/categories/:id' component={ ({match}) => <CategoryShowPage categories={this.props.categories} id={match.params.id} />}/> 
               </div>
          </Switch>
