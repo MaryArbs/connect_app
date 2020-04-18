@@ -66,8 +66,14 @@
   padding: 70px;
   width: 50%;
   height: 415px;
+  font-size: 22px;
+  color:  #2a6592;
 }
 
+#content{
+  color:  #2a6592;
+  font-size: 22px;
+}
 
 .ui.button-menu {
   cursor: pointer;

@@ -18,6 +18,11 @@ const Header = () =>
                 Home
             </button>
           </NavLink> 
+          <NavLink to="/about">
+            <button class="ui button-menu">
+                About
+            </button>
+          </NavLink>
           <NavLink to="/categories">
             <button class="ui button-menu">
                 Services
