@@ -9,7 +9,6 @@ import CategoryShowPage from '../components/Categories/CategoryShowPage'
 import Footer from '../components/Footer'
 import { fetchServices } from '../actions/index';
 import { fetchCategories } from '../actions/index';
-import Categories from '../components/Categories/Categories';
 import './Main.css'
 
 class Main extends Component {
@@ -21,7 +20,6 @@ class Main extends Component {
 
    
     render() {
-        console.log(this.props.categories)
         return (
          <div>
          <Header/>

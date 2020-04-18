@@ -35,7 +35,6 @@ export const fetchCategories = () => {
       fetch(`http://localhost:3000/services/${service.id}`, data)
       .then(response => response.json())
       .then(service=> {
-        // debugger // Find data in service. Might need to package it different leaving rails.
         dispatch(addLike(service))
       });
     }

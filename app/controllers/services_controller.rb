@@ -19,7 +19,7 @@ class ServicesController < ApplicationController
         # byebug
         @service = Service.find_by(id: params[:id])
         @service.update(service_params)
-        render json: @service #{service: @service} 
+        render json: @service 
       end
     
       private
