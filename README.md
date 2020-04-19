@@ -1,6 +1,6 @@
 # LET'S CONNECT 
 
-LET'S CONNECT is a communinty space for special needs resources. This is a place for individuals who have a disability and for those advocating for them, to seek out resources for special services within their area. There are resources for Occupational Therapy, Physical Therapy and Speech Therapy within Connecticut, USA.
+LET'S CONNECT is a community space for special needs resources. This is a place for individuals who have a disability and for those advocating for them, to seek out resources for special services within their area. There are resources for Occupational Therapy, Physical Therapy and Speech Therapy within Connecticut, USA.
 
 # Getting Started 
 
