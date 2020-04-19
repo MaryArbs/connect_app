@@ -35,9 +35,14 @@
     text-align: center;
     padding: 8px;
     border: 2px solid #2a6592;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3);
+    transition: 0.3s;
     /* display: inline-block; */
-    
 }  
+
+.service-card-content:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
 
 
 .service_card_phone_number{

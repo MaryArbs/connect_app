@@ -15,7 +15,7 @@ class Service extends Component {
 
     renderServiceCard = (props) => {
         return (
-        //    <Container className="service-card-container">
+        
            <div className="service-card-container" key={this.props.service.id}>
             <div className="service-card-content">
                <div className="service_card_header">{this.props.service.name}</div><br />
@@ -25,7 +25,7 @@ class Service extends Component {
                <button class="ui button" onClick={this.updateLikes}> Likes: {this.props.service.likes} </button>
             </div>
             </div>
-            // </Container>
+            
         )
     }
 

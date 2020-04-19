@@ -50,7 +50,7 @@
     margin-bottom: 50px;
     box-shadow: 0 10px 15px 0 rgba(0,0,0,0.3);
     transition: 0.3s;
-    width: 75%;
+    width: 85%;
     height: 500px;
 }
 
@@ -71,6 +71,7 @@
   margin: 0 auto; 
   float: none; 
   padding-top: 0px;
+  padding-bottom: 75px;
   width: 50%;
   height: 500px;
   font-size: 22px;
