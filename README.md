@@ -1,24 +1,36 @@
-# README
+# LETS'S CONNECT 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+LET'S CONNECT is a communinty space for special needs resources. This is a place for individuals who have a disability and for those advocating for them, to seek out resources for special services within their area. There are resources for Occupational Therapy, Physical Therapy and Speech Therapy within Connecticut, USA.
 
-Things you may want to cover:
+# Getting Started 
 
-* Ruby version
+To get started with the app, fork and clone this repo. In the root directory of the project, install the needed gems:
 
-* System dependencies
+$ bundle install
+Next, migrate and seed the database:
 
-* Configuration
+$ rake db:migrate
+$ rake db:seed
+Navigate to the client folder and run:
 
-* Database creation
+yarn install
+To start the backend in a local server, from the root directory, run:
 
-* Database initialization
+$ rails server
+To start the frontend in a local server, from the client directory, run:
 
-* How to run the test suite
+$ yarn start
+You should see the app's home page at localhost:3001.
 
-* Services (job queues, cache servers, search engines, etc.)
+Have fun!
 
-* Deployment instructions
+# Built With 
 
-* ...
+Ruby on Rails
+React
+Redux
+SQLite
+Semantic UI React
+
+# Additional Information
+This is a portfolio project for the React-Redux section of Flatiron School's Online Software Engineering program. For more information, see 'https://github.com/learn-co-students/react-redux-assessment-online-web-ft-090919'.
