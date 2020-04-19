@@ -15,8 +15,6 @@
 
 }
 
-
-
 .category_card {
     margin: 0 auto; 
     float: none; 
@@ -88,7 +86,7 @@
   }
 
   .ui.button-category:hover {
-    background-color: yellow;
+    background-color:#FF8C00;
     background-image: none;
     -webkit-box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
             box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;

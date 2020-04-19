@@ -1,3 +1,10 @@
+/* * {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  justify-content: auto;
+
+} */
+
 .quote {
     text-align: center;
     animation: 10s fadeIn;
@@ -60,12 +67,12 @@
 }
 
 .about-content {
+  margin-bottom: 0px; 
   margin: 0 auto; 
   float: none; 
-  margin-bottom: 10px; 
-  padding: 70px;
+  padding-top: 0px;
   width: 50%;
-  height: 415px;
+  height: 500px;
   font-size: 22px;
   color:  #2a6592;
 }

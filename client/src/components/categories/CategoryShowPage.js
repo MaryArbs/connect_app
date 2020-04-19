@@ -37,7 +37,7 @@ class CategoryShowPage extends Component {
     render = () => {
       
          return (
-            <div className="grid-container">
+            <div className="grid-container-services">
             <Container>
                 {this.renderCategory()}
                 {this.renderServices()}

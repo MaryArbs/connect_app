@@ -15,19 +15,17 @@ class Service extends Component {
 
     renderServiceCard = (props) => {
         return (
-           <Container>
-           <Card className="service_card">
-           <div key={this.props.service.id}>
-            <Card.Content>
-               <Card.Header className="card_header">{this.props.service.name}</Card.Header><br />
-               <Card.Description className="card_description"> {this.props.service.location}</Card.Description><br />
-               <Card.Description className="card_description"> {this.props.service.phone_number}</Card.Description><br />
+        //    <Container className="service-card-container">
+           <div className="service-card-container" key={this.props.service.id}>
+            <div>
+               <div className="service_card_header">{this.props.service.name}</div><br />
+               <div className="service_card_location"> {this.props.service.location}</div><br />
+               <div className="service_card_phone_number"> {this.props.service.phone_number}</div><br />
                <a target='_blank' href={this.props.service.url}>Website</a><br /><br />
                <button class="ui button" onClick={this.updateLikes}> Likes: {this.props.service.likes} </button>
-            </Card.Content>
             </div>
-            </Card>
-            </Container>
+            </div>
+            // </Container>
         )
     }
 

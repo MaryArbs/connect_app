@@ -6,7 +6,7 @@
 }
 
 
-.grid-container {
+.grid-container-services {
     padding-top: 0px;
     margin: 8px;
     display: grid;
@@ -17,30 +17,33 @@
 
 }
 
-
-.service_card {
-    /* margin: 0 auto;  */
-    margin: 8px;
+.service-card-container {
+    margin: 0 auto; 
     float: none; 
     margin-bottom: auto; 
-    border-style: solid;
-    border-width: thick;
-    padding: 120px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+    padding-top: 0px;
+    padding-bottom: 150px;
     width: 70%;
     height: 100px;
 } 
 
+ .content {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}  
 
 
-.service_card:hover {
+/* .service_card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+  } */
+
+  .service_card_phone_number{
+    font-style: italic;
   }
 
 
-
-.card_header {
+ .service_card_header {
+    font-weight: bold;
     color: #2a6592;
     font-size: 20px;
     border-bottom: solid;
