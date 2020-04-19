@@ -14,7 +14,7 @@ class CategoryShowPage extends Component {
         return  this.props.categories.filter(category => category.id == this.props.id).map((category) => {
             return (
                 <div>
-                <h1>{category.name}</h1>
+                <div className="category_name"><h1>{category.name}</h1></div>
                 <div className="category_description" ><h3>{category.description}</h3></div>
                 <div><Image className='category_image' src={category.image} /></div><br /> 
                 </div>

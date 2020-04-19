@@ -17,7 +17,7 @@ class Service extends Component {
         return (
         //    <Container className="service-card-container">
            <div className="service-card-container" key={this.props.service.id}>
-            <div>
+            <div className="service-card-content">
                <div className="service_card_header">{this.props.service.name}</div><br />
                <div className="service_card_location"> {this.props.service.location}</div><br />
                <div className="service_card_phone_number"> {this.props.service.phone_number}</div><br />

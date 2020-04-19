@@ -28,7 +28,12 @@
 } 
 
 .category_description {
+    color: #2a6592;
     font-style: italic;;
+}
+
+.category_name {
+    color: orange;
 }
 
 .category_card:hover {

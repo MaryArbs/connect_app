@@ -2,11 +2,12 @@
     text-align: center;
     font-family: "Times New Roman", Times, serif;
     justify-content: auto;
+   
 
 }
 
 
-.grid-container-services {
+/* .grid-container-services {
     padding-top: 0px;
     margin: 8px;
     display: grid;
@@ -15,9 +16,10 @@
     font-size: 18px;
     color: #2a6592;
 
-}
+} */
 
 .service-card-container {
+    text-align: center;
     margin: 0 auto; 
     float: none; 
     margin-bottom: auto; 
@@ -27,25 +29,26 @@
     height: 100px;
 } 
 
- .content {
-    padding-top: 0px;
-    padding-bottom: 0px;
+ .service-card-content {
+    margin-right: 150px;
+    margin-left: 80px;
+    text-align: center;
+    padding: 8px;
+    border: 2px solid #2a6592;
+    /* display: inline-block; */
+    
 }  
 
 
-/* .service_card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
-  } */
-
-  .service_card_phone_number{
+.service_card_phone_number{
     font-style: italic;
   }
 
 
  .service_card_header {
     font-weight: bold;
-    color: #2a6592;
+    color: orange;
     font-size: 20px;
-    border-bottom: solid;
+    /* border-bottom: solid; */
 }
 
