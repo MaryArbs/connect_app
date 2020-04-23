@@ -11,4 +11,6 @@ export default function categoriesReducer(state = { categories: [], loading: fal
   }
 }
 
+ // pure functions have no side effects
+ 
 

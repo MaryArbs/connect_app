@@ -9,7 +9,7 @@ import {NavLink} from 'react-router-dom'
 
 const Category = props => {
     return (
-        <Container>
+      <Container>
        <Card className="category_card">
        <div key={props.category.id}>
         <Card.Content>
@@ -34,3 +34,5 @@ const Category = props => {
 
 
 export default Category
+
+//hooks can add state to function components. Mimic lifecylce methods. 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container } from 'semantic-ui-react'
-import {NavLink} from 'react-router-dom'
+import {NavLink} from 'react-router-dom' //updates the browser URL and renders the route componenet 
 
 
 

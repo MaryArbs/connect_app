@@ -12,6 +12,9 @@ import { fetchCategories } from '../actions/index';
 import About from '../components/About'
 import './Main.css'
 
+
+//this could all go in app..js
+
 class Main extends Component {
 
     componentDidMount(){
@@ -29,13 +32,18 @@ class Main extends Component {
               <Route exact path="/" component={ Home } />
               <Route exact path="/categories" component={ CategoriesContainer } />
               <Route exact path="/about" component={ About } />
-              <Route exact path='/categories/:id' component={ ({match}) => <CategoryShowPage categories={this.props.categories} id={match.params.id} />}/> 
+              <Route exact path='/categories/:id' component={ ({match}) => <CategoryShowPage id={match.params.id} />}/> 
+    
               </div>
          </Switch>
          <Footer />
      </div>
     )};
 }
+//a prop called match gets passed to every roure that is rendered
+//inside match object is a params object
+//holds all matching params-the key is the name specified when creating the route (ex; :id), and value is actual value in URL
+//id={match.params.id} is reference as this.props.id in CategoryShowPage, where teh matching param to the category 'clickled' will be rendered. 
     
     
     const mapStateToProps = (state) => {

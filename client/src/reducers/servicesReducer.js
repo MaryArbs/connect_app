@@ -13,3 +13,6 @@ export default function servicesReducer(state = { services: [], loading: false }
             return state
   }
 }
+
+//map through services if service.id does not match servic.id sent in from updateLikes them return service if not then update likes 
+//!== not equal value or not equal type

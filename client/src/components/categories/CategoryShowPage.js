@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react' //gives your component access to React.Component's functions
 import { Container } from 'semantic-ui-react';
 import Service from '../Services/Service'
 import { connect } from 'react-redux';
@@ -6,9 +6,27 @@ import Category from './Category';
 import { Card, Image} from 'semantic-ui-react';
 
 
+//could be a container 
+//shows one category and the services that belong to it 
 
 class CategoryShowPage extends Component {
 
+    state = {
+        onlyWater: false
+    }
+    
+    handleClick = () => {
+        this.setState ({
+         onlyWater: true 
+        })
+     }
+
+ 
+    
+   
+        
+
+//filtering through categories to find the category id that matches the  props.id (id={match.params.id} ) sent from the route in the main container. 
 
     renderCategory = () => {
         return  this.props.categories.filter(category => category.id == this.props.id).map((category) => {
@@ -21,8 +39,12 @@ class CategoryShowPage extends Component {
             )}
         )};
 
+//
     renderServices = () => {
-       let serviceList = this.props.services.filter(service => service.category_id == this.props.id).map((service)=>{
+       let serviceList = this.state.onlyWater
+            ? this.props.services.filter(service => (/water/i).test(service.location))
+            : this.props.services.filter(service => service.category_id == this.props.id)
+       serviceList = serviceList.map((service)=>{
        return <Service key={service.id} service={service} />
        })
 
@@ -41,6 +63,7 @@ class CategoryShowPage extends Component {
             <Container>
                 {this.renderCategory()}
                 {this.renderServices()}
+                <button class="ui button" onClick={this.handleClick}>Click</button>
              </Container>
              </div>
            
@@ -59,4 +82,19 @@ class CategoryShowPage extends Component {
  
 export default connect(mapStateToProps)(CategoryShowPage);
 
+
+
+// state = {
+//     onlyWater: false
+// }
+
+// handleChange() {
+//    this.setState ({
+//     onlyyWater: true 
+//    })
+// }
+
+// render({ 
+
+// })
 

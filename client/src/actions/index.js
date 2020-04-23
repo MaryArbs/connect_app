@@ -45,3 +45,5 @@ export const fetchCategories = () => {
     type: 'UPDATE_LIKES',
     payload: service 
   });
+
+  //action creator: function that returns an action 

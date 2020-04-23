@@ -1,14 +1,14 @@
 // import * as serviceWorker from './serviceWorker'; what does this do ?
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'; //react is a npm package. Need to turn JSX into JS using babel 
+import ReactDOM from 'react-dom'; //provides DOM-specific methods (render())
 import './index.css';
 import App from './App';
-import { BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router} from 'react-router-dom'; // giving acces to set u routes and change URL
 
 // set up Redux store
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { createStore, applyMiddleware } from 'redux'; //middleware is thunk (between action and reducer/async API calls)
+import { composeWithDevTools } from 'redux-devtools-extension'; //Redux dev tools
 import thunk from 'redux-thunk';
 import rootReducer from './reducers/rootReducer';
 

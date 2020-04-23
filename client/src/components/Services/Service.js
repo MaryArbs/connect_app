@@ -5,6 +5,8 @@ import './serviceCard.css';
 import {connect} from 'react-redux'
 import { updateLikes } from '../../actions/index.js'
 
+//should be container because connected to store?
+
 class Service extends Component {
 
     updateLikes = () => {
@@ -43,4 +45,5 @@ class Service extends Component {
 
 
 export default connect(null,{updateLikes})(Service)
+
 
