@@ -7,9 +7,9 @@ import '../components/Categories/categoryCard.css'
 
 class CategoriesContainer extends Component {
 
-    renderCategories = () => { 
+    renderCategories = () => {
         return this.props.categories.map(category => {
-            return ( 
+            return (
                 <Category key={category.id} category={category} />)  // pass to category page where the category cards are rendered
         })
     };
@@ -19,24 +19,24 @@ class CategoriesContainer extends Component {
         console.log(this.props)
         return (
             <div className="grid-container">
-              {this.renderCategories()}
+                {this.renderCategories()}
             </div>
         )
     };
 }
 
-    const mapStateToProps = (state) => {
-        console.log(state)
-        return {
-            categories: state.categoriesReducer.categories,
-            services: state.servicesReducer.services,
-        }
-    };
+const mapStateToProps = (state) => {
+    console.log(state)
+    return {
+        categories: state.categoriesReducer.categories,
+        services: state.servicesReducer.services,
+    }
+};
 
 
 export default connect(mapStateToProps)(CategoriesContainer);
 
 
 
-    
- 
+
+

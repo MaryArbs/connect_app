@@ -3,7 +3,7 @@ import React from 'react'; //react is a npm package. Need to turn JSX into JS us
 import ReactDOM from 'react-dom'; //provides DOM-specific methods (render())
 import './index.css';
 import App from './App';
-import { BrowserRouter as Router} from 'react-router-dom'; // giving acces to set u routes and change URL
+import { BrowserRouter as Router } from 'react-router-dom'; // giving acces to set u routes and change URL
 
 // set up Redux store
 import { Provider } from 'react-redux';
@@ -20,9 +20,9 @@ const store = createStore(rootReducer, composeWithDevTools(
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-    <App />
+      <App />
     </Router>
-   </Provider>,
+  </Provider>,
   document.getElementById('root')
 );
 
